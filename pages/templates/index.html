@@ -1,0 +1,208 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somon.tj</title>
+    
+    <link rel="stylesheet" href="{% static 'myfirst.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" href="https://somon.tj/static/favicons/favicon.e6a7156b2f04.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <img class="_logo" src="/static/image/slogo.svg" alt="logo">
+       <div>
+             <a class="mm" href="">Personal account</a>
+            <a class="m" href="">Registration and Login</a>
+            <img class="mmm" src="/static/image/dropdown_arrow.png" alt="">
+            <a href=""><img  src="/static/image/star.svg" alt="star"></a>
+            <a href=""><img  src="/static/image/somonchat.svg" alt="chat"></a>
+            <button>submit and ad</button>
+        </div>
+    </header>
+
+    <form>
+        <input type="text" id="search-input" placeholder="Enter your search term">
+        <select id="dropdown">
+          <option value="all cities">All cities</option>
+          <option value="dushanbe">Dushanbe</option>
+          <option value="vadat">Vadat</option>
+          <option value="khujand">Khujand</option>
+          <option value="hesar">Hesar</option>
+        </select>
+        <button class="buttS" type="submit">Search <img class="buttt" src="/static/image/search-submit.png" alt=""></button>
+      </form>
+       
+
+
+
+    <section class="sections">
+        <div class="box">
+            <span>
+                <img src="/static/image/house.png" alt="">
+                <h1>Real estate</h1>
+            </span>
+            <span>
+                <img src="/static/image/baby.png" alt="">
+                <h1>Children World</h1>
+            </span>
+            <span>
+                <img src="/static/image/furniture.png" alt=""> 
+                <h1>Everything for home</h1>
+            </span>
+            <span>
+                <img src="/static/image/compu.png" alt="">
+                <h1>Computers and office equipments</h1>
+            </span>
+        </div>
+
+
+        <div class="box">
+            <span>
+                <img src="/static/image/60_cars.png" alt="">
+                <h1>Transport</h1>
+            </span>
+            <span>
+                <img src="/static/image/dress.png" alt="">
+                <h1>Clothing Personal</h1>
+            </span>
+            <span>
+                <img src="/static/image/build.png" alt="">
+                <h1>Construction, raw materials and repair</h1>
+            </span>
+            <span>
+                <img src="/static/image/60_4business_preview.png" alt="">
+                <h1>Everything for business</h1>
+            </span>
+        </div>
+
+
+
+
+        <div class="box">
+            <span>
+                <img src="/static/image/vac.png" alt="">
+                <h1>Job</h1>
+            </span>
+            <span>
+                <img src="/static/image/ball.png" alt=""> 
+            <h1>Hobbies, music and sports</h1>
+        </span>
+            <span>
+             <img src="/static/image/60_free.png" alt="">
+            <h1>I will give it away for free</h1>
+        </span>
+            <span>
+             <img src="/static/image/tel2_Gxk0jOq.png" alt="">
+            <h1>Telephone and communication</h1>
+        </span>
+        </div>
+
+
+        <div class="box">
+            <span>
+                <img src="/static/image/business3.png" alt="">
+                <h1>Service</h1>
+            </span>
+            <span>
+                <img src="/static/image/radio.png" alt="">
+                <h1>Electronic & Home Applications</h1>
+                 
+            </span>
+            <span>
+                <img src="/static/image/animals.png" alt="">
+                <h1>Animals and plants</h1>
+            </span>
+        </div>
+    </section>
+    
+    
+
+  <section class="layout">   
+<ul class="uls">
+    {% for x in mymembers %}
+      <li><a href="details/{{ x.id }}"> {{ x.price }} <br> {{ x.Name }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+
+
+
+
+
+
+
+<footer class="footer">
+        <div class="wrap">
+     <div class="foot_raw">
+            <div class="footer_colum">
+              <a class="footer__logo" href=""><img class="footer_logo" src="../static/image/somon_logo.png" alt=""></a>
+             </div>
+            <div class="footer__column _middle">
+              <div class="social_icons">
+              <img src="../static/image/fb2.png" alt="">
+              <img src="../static/image/insta.png" alt="">
+              <img src="/static/image/ok.png" alt="">
+              <img src="/static/image/vk.png" alt="">
+              </div>
+            </div>
+           
+         <div class="footer_submit">
+                    <a class="header-menu" href="">Submit an ad</a>
+                </div>
+              
+                <div class="footer_app">
+                    
+                  <a  href="https://play.google.com/store/apps/details?id=tj.somon.somontj&amp;referrer=&amp;utm_source=site&amp;utm_medium=cpc&amp;utm_term=mobile_v" target="_blank">
+                    <img class="app-google" alt="Announcements Somon.tj" src="https://somon.tj/static/images/store/rus_google.e55e3da8d96f.png" _mstalt="1832441" _msthash="506">
+                  </a>
+                  <a  href="https://itunes.apple.com/app/id1176500586" target="_blank">
+                    <img class="app-google" src="https://somon.tj/static/images/store/rus_apple.3c6a09095a9c.png" alt="Announcements Somon.tj" _mstalt="1832441" _msthash="507">
+                  </a>
+                </div>
+               
+        </div>
+
+
+
+        <span class="sp">Mobile version</span> 
+    <div class="Fmain">
+          <div class="fwor1">
+            <a href="h" >Site Map</a>
+            <a href="h">Site Rules</a>
+            <a href="h">License Agreement</a>
+            <a href="h">Offer</a>
+            <a href="h">Map of districts</a>
+            <a  href="h">Security</a>
+            </div>
+                  
+                
+ 
+            
+      <div class="fwor2"> 
+         <a  href="h">Help</a>
+         <a  href="h">Our vacancies</a>
+         <a  href="h">Price list</a>  
+         <a  href="h">Payment via Tcell</a>
+         <a  href="h">Payment via MegaFon-Tajikistan</a>
+         <a  href="h">Payment via Babilon-Mobile</a>
+         <a href="h">Get a link to the app via SMS</a>   
+     </div>
+
+     <div class="installfoto"><a href="h" >Install the Somon.tj app</a>
+        <img class="install" src="/static/image/somon.png" alt="">
+    </div>
+
+    </div>            
+  
+          
+                 
+            
+       
+</footer>
+</body>
+</html>
